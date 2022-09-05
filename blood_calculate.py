@@ -7,6 +7,7 @@ def interface():
     print("9 - Quit")
     print("1 - Analyze HDL")
     print("3 - Analyze LDL")
+    print("5 - Analyze Total Cholesterol")
     keep_running = True
     while keep_running:
         choice = input("Enter choice: ")
@@ -16,6 +17,8 @@ def interface():
             HDL_driver()
         elif choice == "3":
             LDL_driver()
+        # elif choice == "5":
+            # total_cholesterol_driver()
 
 def input_HDL():
     HDL_input = input("Enter the HDL value:")
@@ -33,6 +36,7 @@ def HDL_driver():
     hdl_value = input_HDL()
     answer = check_HDL(hdl_value)
     output_HDL_result(hdl_value, answer)
+    return hdl_value
 
 def output_HDL_result(hdl_value, charac):
     print("The result for an HDL value of {} is {}".format(hdl_value, charac))
@@ -55,8 +59,21 @@ def LDL_driver():
     ldl_value = input_LDL()
     answer = check_LDL(ldl_value)
     output_LDL_result(ldl_value, answer)
+    return ldl_value
 
 def output_LDL_result(ldl_value, charac):
     print("The result for an LDL value of {} is {}".format(ldl_value, charac))
+
+# def get_total_cholesterol():
+#     LDL_driver()
+#     return int(HDL_input)
+
+# def check_total_cholesterol(total_cholesterol_value):
+#     if total_cholesterol_value >= 240:
+#         return "High"
+#     elif 200 <= total_cholesterol_value < 240:
+#         return "Borderline High"
+#     else:
+#         return "Normal"
 
 interface()
