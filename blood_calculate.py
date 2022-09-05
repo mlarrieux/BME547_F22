@@ -64,9 +64,12 @@ def LDL_driver():
 def output_LDL_result(ldl_value, charac):
     print("The result for an LDL value of {} is {}".format(ldl_value, charac))
 
-# def get_total_cholesterol():
-#     LDL_driver()
-#     return int(HDL_input)
+def total_cholesterol_driver():
+    ldl_value = LDL_driver()
+    hdl_value = HDL_driver()
+    total_cholesterol_value = ldl_value + hdl_value
+    # answer = check_total_cholesterol(total_cholesterol_value)
+    # output_total_cholesterol_result(total_cholesterol_value, answer)
 
 # def check_total_cholesterol(total_cholesterol_value):
 #     if total_cholesterol_value >= 240:
