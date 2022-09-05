@@ -14,6 +14,8 @@ def interface():
             return
         elif choice == "1":
             HDL_driver()
+        elif choice == "3":
+            LDL_driver()
 
 def input_HDL():
     HDL_input = input("Enter the HDL value:")
