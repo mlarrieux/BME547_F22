@@ -79,4 +79,7 @@ def total_cholesterol_driver():
 #     else:
 #         return "Normal"
 
+def output_total_cholesterol_result(total_cholesterol_value, charac):
+    print("The result for a total cholesterol value of {} is {}".format(total_cholesterol_value, charac))
+
 interface()
