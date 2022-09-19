@@ -82,4 +82,5 @@ def check_total_cholesterol(total_cholesterol_value):
 def output_total_cholesterol_result(total_cholesterol_value, charac):
     print("The result for a total cholesterol value of {} is {}".format(total_cholesterol_value, charac))
 
-interface()
+if __name__ == "__main__":
+    interface()
