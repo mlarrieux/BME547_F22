@@ -2,6 +2,7 @@ def create_patient_entry(patient_name, patient_id, patient_age):
     new_patient = [patient_name, patient_id, patient_age, []]
     return new_patient
 
+
 def main():
     db = []
     db.append(create_patient_entry("Ann Able", 1, 30))
@@ -20,12 +21,14 @@ def main():
     for patient, room in zip(db, room_list):
         print("Name = {}, Room = {}".format(patient[0], room))
 
-    
+
 def print_database(db):
     print("This is an output of all patients and information:\n\n")
     for patient in db:
         name = patient[0].split(" ")
-        print("First Name: {}\t Last Name: {}\t Patient ID: {}\t Patient Age: {}".format(name[0], name[1], patient[1], patient[2]))
+        print("First Name: {}\t Last Name: {}\t Patient ID: {}\t Patient\
+             Age: {}".format(name[0], name[1], patient[1], patient[2]))
+
 
 def find_patient(db, id_no):
     for patient in db:
@@ -33,9 +36,11 @@ def find_patient(db, id_no):
             return patient
     return False
 
+
 def add_test_to_patient(db, id_no, test_name, test_value):
     patient = find_patient(db, id_no)
     patient[3].append((test_name, test_value))
+
 
 if __name__ == "__main__":
     main()

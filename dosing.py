@@ -30,6 +30,7 @@ def get_patient_weight():
         weight = weight / 2.205
     return weight
 
+
 def get_dosage():
     diagnosis = pick_diagnosis()
     weight = get_patient_weight()
