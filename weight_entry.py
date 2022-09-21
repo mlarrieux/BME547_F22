@@ -1,6 +1,6 @@
 # Weight Entry Starter Code
 
-## `weight_entry.py`
+# `weight_entry.py`
 
 def input_weight_entry():
     print("Enter patient weight in form of ## units (e.g., 105 lb)")
@@ -33,6 +33,7 @@ def convert_lb_to_kg(weight_lb):
 if __name__ == "__main__":
     input_weight_entry()
 
-def add(a,b):
+
+def add(a, b):
     c = a + b
     return c
