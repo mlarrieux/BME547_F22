@@ -19,17 +19,16 @@ def adult_or_minor(patient):
 
 def print_database(db):
     print("This is an output of all patients and information:\n\n")
-    for patient in db:
+    for patient_key in db:
         print("First Name: {}\t Last Name: {}\t Patient ID: {}\t Patient\
-             Age: {}".format(patient['first name'], patient['last name'],
-              patient["ID"], patient['age']))
+             Age: {}".format(get_full_name(db[patient_key]),
+              db[patient_key]['last name'],
+              db[patient_key]["ID"], db[patient_key]['age']))
 
 
 def find_patient(db, id_no):
-    for patient in db:
-        if patient["ID"] == id_no:
-            return patient
-    return False
+    patient = db[id_no]
+    return patient
 
 
 def add_test_to_patient(db, id_no, test_name, test_value):
@@ -38,13 +37,12 @@ def add_test_to_patient(db, id_no, test_name, test_value):
 
 
 def main():
-    db = []
-    db.append(create_patient_entry("Ann", "Able", 1, 30))
-    db.append(create_patient_entry("Bob", "Boyles", 2, 34))
-    db.append(create_patient_entry("Chris", "Chou", 3, 25))
+    db = {}
+    db[1] = create_patient_entry("Ann", "Able", 1, 30)
+    db[2] = create_patient_entry("Bob", "Boyles", 2, 34)
+    db[3] = create_patient_entry("Chris", "Chou", 3, 25)
     add_test_to_patient(db, 3, "HDL", 100)
-    print(find_patient(db, 3))
-    print(db)
+    print_database(db)
 
     print("Patient {} is a {}".format(get_full_name(db[2]),
                                       adult_or_minor(db[2])))
