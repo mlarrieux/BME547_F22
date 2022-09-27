@@ -1,8 +1,37 @@
+class Patient:
+
+    def __init__(self) -> None:
+        self.first_name = ''
+        self.last_name = ''
+        self.id = ''
+        self.age = ''
+        self.tests = []
+
+    def full_name(self):
+        return "{} {}".format(self.first_name, self.last_name)
+
+
 def create_patient_entry(patient_first_name, patient_last_name, patient_id, 
                          patient_age):
-    new_patient = {'first name': patient_first_name,
-                   'last name': patient_last_name,
-                   "ID": patient_id, 'age': patient_age, 'test_results': ''}
+
+    # if we want a dictionary 
+
+    # new_patient = {'first name': patient_first_name,
+    #                'last name': patient_last_name,
+    #                "ID": patient_id, 'age': patient_age, 'test_results': ''}
+
+    # OR
+
+    # new_patient = Patient()
+    # new_patient.first_name = patient_first_name
+    # new_patient.last_name = patient_last_name
+    # new_patient.id = patient_id
+    # new_patient.age = patient_age
+
+    # OR
+
+    new_patient = Patient(patient_first_name, patient_last_name, patient_id,
+                          patient_age)
     return new_patient
 
 
