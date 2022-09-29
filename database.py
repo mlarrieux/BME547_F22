@@ -11,10 +11,10 @@ class Patient:
         return "{} {}".format(self.first_name, self.last_name)
 
 
-def create_patient_entry(patient_first_name, patient_last_name, patient_id, 
+def create_patient_entry(patient_first_name, patient_last_name, patient_id,
                          patient_age):
 
-    # if we want a dictionary 
+    # if we want a dictionary
 
     # new_patient = {'first name': patient_first_name,
     #                'last name': patient_last_name,
